@@ -78,6 +78,17 @@ let recrusive_fn () =
   in
   loop 2;;
 
+let if_expr x =
+  if x > 1 then "x is greater than 1!"
+  else if x = 1 then "x is equal to 1!"
+  else "x is lesser than 1!"
+
+let match_expr expr =
+  match expr with
+  | (a, 0) -> Some a   (* case 1 *)
+  | (0, b) -> Some b   (* case 2 *)
+  | _ -> None          (* default case *)
+
 
 (* ============== *)
 (*      List      *)
