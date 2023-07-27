@@ -27,7 +27,7 @@ let my_score : score = {
   }
 
 (* ヴァリアント: 「どれかひとつ」を表す型 *)
-(* type 型名 = 構成子 of 引数の型 | ... *)
+(* type 型名 = 構成子 of 引数の型 | ...   *)
 type str_or_num = Str of string | Num of int
 type 'a list_t =
   | Nil                     (* 引数なし *)
@@ -178,14 +178,14 @@ module Tree : Tree_t = struct
   exception Todo
 
   (* 木の中の整数の合計を返す *)
-  (* sum_tree : tree -> int *)
+  (* sum_tree : tree -> int   *)
   let rec sum_tree tree =
     match tree with
     | Empty -> 0
     | Node (l, n, r) -> sum_tree l + n + sum_tree r
 
   (* 二分探索木の中に、数字`m`が存在するか判定する *)
-  (* search : tree -> int -> bool *)
+  (* search : tree -> int -> bool                  *)
   let rec search tree m =
     match tree with
     | Empty -> false
