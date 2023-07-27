@@ -36,6 +36,12 @@ type 'a tree_t =
   | Nil
   | Node of 'a * 'a tree_t * 'a
 
+(* Option : None かもしれない値を表す型          *)
+(* None はほかの言語でいう null などに相当する。 *)
+(* type 'a option = None | Some of 'a            *)
+let maybe_none1 : int option = Some 3
+let maybe_none2 : string option = Some "not null"
+let maybe_none3 : string option = None
 
 (* ============== *)
 (*     演算子     *)
